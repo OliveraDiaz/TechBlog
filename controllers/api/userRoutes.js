@@ -1,28 +1,24 @@
 const router = require('express').Router();
-const userRoutes = require('../../models');
+// const userRoutes = require('../../models');
 // double chech userRoutes if it fails.
 const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        const userData = await User.create({
-            username: req.body.username,
-            password: req.body.password,
-        });
-
-        req.session.save(() => {
+        const userData = await User.create(req.body);
+ 
+        req.session.save(() => {    
+            req.session.user_id = userData.id;
             req.session.loggedIn = true;
 
             res.status(200).json(userData);
         }
         );
     } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
+        res.status(400).json(err);
     }
 }
 );
-
 //double check this route. username might be email
 router.post('/login', async (req, res) => {
     try {
