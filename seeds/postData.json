@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Bootcamp or degree?",
+        "content": "I'm wondering if it's worth it to go to a bootcamp or if I should go back to school and get a degree in computer science. ",
+        "user_id": "1"
+
+    },
+
+    {
+        "title": "Mac or PC?",
+        "content": "I want to get a new computer but I'm not sure if I should get a Mac or a PC. What do you think?",
+        "user_id": "2"
+
+    },
+
+    {
+        "title": "Work from home or in the office?",
+        "content": "I'm wondering if I should work from home or in the office. What do you think?",
+        "user_id": "2"
+
+    }
+]

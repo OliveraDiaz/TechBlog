@@ -1,1 +1,32 @@
-<h1>test</h1>
+<h2 class="flex justify-center text-3xl text-cyan-50">
+    Posts
+</h2>
+
+<section  class="articles  text-cyan-800 text-lg font-bold mx-5 my-2 px-3 py-2 ">
+    
+
+
+    <div class="container grid grid-cols-1 md:grid-cols-3 gap-4">
+        {{#each posts}}
+        <div class="bg-white p-4 rounded shadow-md">
+            <h3 class="text-xl font-semibold mb-2"><a href="/post/{{id}}" class="text-cyan-600 hover:underline">{{title}}</a></h3>
+            <p class="text-gray-700 mb-4">{{content}}</p>
+            <p class="text-gray-600 font-semibold">User ID: {{user_id}}</p>
+        </div>
+        {{/each}}
+    </div> 
+    
+       
+
+   
+
+   
+</section>
+
+        
+    {{!-- </main>
+    {{if logged_in}}
+    <script src="/js/login.js"></script>
+    {{else}}
+    <script src="/js/logout.js"></script>
+    {{/if}} --}}
