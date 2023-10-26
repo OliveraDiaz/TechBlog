@@ -14,18 +14,27 @@
         <nav>
             <!-- Cread a dashboad route -->
             {{#if logged_in}}
+
             <a href="/dashboard">Dashboard</a> 
+
             <button class="no-button" id="logout">logout</button>
             {{else}}
+
             <button class="bg-cyan-100 py-3 px-3">
                 <a href="/login">Login</a>
             </button>
+
             {{/if}}
             
             <button class="bg-cyan-100 py-3 px-3">
-                Signup
+                <a href="/signup">Signup</a>
+            </button>
+
+
             <button class="bg-cyan-100 py-3 px-3 ml-1" >
-                Dashboard
+                <a href="/dashboard">Dashboard</a>
+                  <a href="/dashboard">Dashboard</a> 
+
             </button>
         </nav>
 
@@ -34,6 +43,7 @@
     <main class="container container-fluid">
         {{{body}}}
     </main>
+    
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
